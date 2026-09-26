@@ -1,0 +1,39 @@
+[build]
+  publish = "public"
+  command = "node build.js"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["lib/**"]
+
+# Lead form endpoint
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
+
+# Old WordPress URLs -> new clean URLs (keeps Google rankings)
+[[redirects]]
+  from = "/commercial-vinyl-wrapping-basingstoke-vinyl-wrapping-basingstoke/"
+  to = "/vinyl-wrapping-basingstoke/"
+  status = 301
+[[redirects]]
+  from = "/commercial-vinyl-wrapping-guildford-vinyl-wrapping-guildford/"
+  to = "/vinyl-wrapping-guildford/"
+  status = 301
+[[redirects]]
+  from = "/commercial-vinyl-wrapping-woking-vinyl-wrapping-woking/"
+  to = "/vinyl-wrapping-woking/"
+  status = 301
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

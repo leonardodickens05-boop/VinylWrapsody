@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="{{asset:img/logo.png}}" alt="Vinyl Wrapsody" width="96" height="96" loading="lazy">
+        <p>Interior vinyl wrapping specialists for homes and businesses across Surrey, Hampshire and London.</p>
+        <div class="footer-badges">
+          <img src="{{asset:img/brand-3m-dinoc.png}}" alt="3M DI-NOC architectural finishes" height="28" loading="lazy">
+          <img src="{{asset:img/brand-coverstyl.png}}" alt="Cover Styl' vinyl" height="28" loading="lazy">
+        </div>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="{{link:kitchen}}">Kitchen vinyl wrapping</a></li>
+          <li><a href="{{link:commercial}}">Commercial interior wrapping</a></li>
+          {{#each locations}}<li><a href="{{link:loc-{{this.slug}}}}">Vinyl wrapping {{this.town}}</a></li>{{/each}}
+          <li><a href="{{link:contact}}">Contact &amp; quotes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3><img src="{{asset:img/flag-uk.png}}" alt="" width="18" height="18"> UK contact</h3>
+        <ul class="contact-list">
+          <li><a href="tel:{{site.phoneIntl}}" data-track="click_call">{{site.phoneDisplay}}</a></li>
+          <li><a href="mailto:{{site.email}}">{{site.email}}</a></li>
+          <li>{{site.address}}</li>
+          <li>{{site.hours}} · Sun closed</li>
+        </ul>
+      </div>
+      <div>
+        <h3><img src="{{asset:img/flag-za.png}}" alt="" width="18" height="18"> South Africa</h3>
+        <ul class="contact-list">
+          <li><a href="tel:+27619341890">{{site.saPhone}}</a></li>
+          <li><a href="mailto:{{site.saEmail}}">{{site.saEmail}}</a></li>
+          <li>{{site.saAddress}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© {{site.year}} {{site.legalName}}. All rights reserved. <a href="{{link:privacy}}">Privacy policy</a></p>
+      <div class="socials">
+        <a href="{{site.facebook}}" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg></a>
+        <a href="{{site.instagram}}" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/{{site.whatsapp}}" target="_blank" rel="noopener" aria-label="WhatsApp" data-track="click_whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8.2 8.2 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4 3.5 3.5 0 0 0-1.1 2.6 6.1 6.1 0 0 0 1.3 3.2 13.9 13.9 0 0 0 5.3 4.7c2 .8 2.7.9 3.7.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.9 17.8L.2 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>

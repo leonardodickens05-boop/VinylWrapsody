@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{var:title}}</title>
+<meta name="description" content="{{var:description}}">
+{{#if preview}}<meta name="robots" content="noindex">{{else}}<link rel="canonical" href="{{var:canonical}}">{{/if}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vinyl Wrapsody">
+<meta property="og:title" content="{{var:title}}">
+<meta property="og:description" content="{{var:description}}">
+<meta property="og:url" content="{{var:canonical}}">
+<meta property="og:image" content="{{site.url}}/assets/img/608355552_18070300910527175_7827896692025425421_n.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111010">
+<link rel="icon" href="{{asset:img/favicon.png}}" type="image/png">
+<link rel="apple-touch-icon" href="{{asset:img/favicon.png}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..700&family=Stack+Sans+Headline:wght@200..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{asset:css/style.css}}">
+<script>
+  window.VW = {
+    gaId: "{{site.gaId}}",
+    phone: "{{site.phoneIntl}}",
+    whatsapp: "{{site.whatsapp}}",
+    leadEndpoint: "/api/lead",
+    thankYou: "{{link:thank-you}}",
+    demo: {{#if preview}}true{{else}}false{{/if}}
+  };
+</script>
+{{#if preview}}{{else}}
+<!-- Google Analytics 4 (existing property ID carried over). Conversions fire as generate_lead / click_call / click_whatsapp events. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.gaId}}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{site.gaId}}');</script>
+{{/if}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "{{site.url}}/#business",
+  "name": "{{site.name}}",
+  "legalName": "{{site.legalName}}",
+  "url": "{{site.url}}/",
+  "logo": "{{site.url}}/assets/img/logo.png",
+  "image": "{{site.url}}/assets/img/608355552_18070300910527175_7827896692025425421_n.jpg",
+  "telephone": "{{site.phoneIntl}}",
+  "email": "{{site.email}}",
+  "priceRange": "££",
+  "description": "Domestic and commercial interior vinyl wrapping specialists. Kitchens, wardrobes, offices, hotels and retail interiors across Surrey, Hampshire and London.",
+  "address": {"@type": "PostalAddress", "streetAddress": "39 Rudgard Way", "addressLocality": "Liphook", "addressRegion": "Hampshire", "postalCode": "GU30 7GW", "addressCountry": "GB"},
+  "areaServed": ["Surrey", "Hampshire", "London", "Guildford", "Woking", "Basingstoke", "Windsor"],
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "09:00", "closes": "18:00"}],
+  "sameAs": ["{{site.instagram}}", "{{site.facebook}}"]
+}
+</script>
+</head>
+<body class="page-{{var:page}}">
+<a class="skip-link" href="#main">Skip to content</a>
+{{> header}}
+<main id="main">
+{{body}}
+</main>
+{{> footer}}
+{{> quote-form}}
+{{> mobile-bar}}
+<script src="{{asset:js/main.js}}" defer></script>
+<script src="{{asset:js/lead-form.js}}" defer></script>
+</body>
+</html>

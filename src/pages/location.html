@@ -1,0 +1,68 @@
+<!--
+title: Commercial Vinyl Wrapping {town} | Offices, Hotels & Retail | Vinyl Wrapsody
+description: Premium commercial vinyl wrapping in {town}, {county}. Transform desks, walls, joinery, lifts and hotel rooms without downtime. Free site surveys from Vinyl Wrapsody Ltd.
+-->
+<section class="hero hero-short" style="background-image:url('{{asset:img/{{var:loc.hero}}}}')">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="hero-kicker">Commercial vinyl wrapping · {{var:loc.town}}, {{var:loc.county}}</p>
+      <h1>Commercial vinyl wrapping in {{var:loc.town}}</h1>
+      <p class="lead">Lift interiors, reception desks, boardroom walls, office joinery, hotel rooms and more, refreshed without the cost, downtime or disruption of a full refurbishment.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="{{link:contact}}#quote" data-open-quote>Book a free site survey <span aria-hidden="true">→</span></a>
+        <a class="btn btn-outline btn-lg" href="tel:{{site.phoneIntl}}" data-track="click_call">Call {{site.phoneDisplay}}</a>
+      </div>
+      <p class="hero-note">Covering {{var:loc.nearby}}</p>
+    </div>
+  </div>
+</section>
+{{> trust-bar}}
+{{> clients}}
+
+<section class="section section-paper">
+  <div class="container split">
+    <div class="split-copy">
+      <p class="eyebrow">Transform</p>
+      <h2>Commercial interior vinyl wrapping in {{var:loc.town}}</h2>
+      <p>{{var:loc.intro}}</p>
+      <p>{{var:loc.intro2}}</p>
+      <p>{{var:loc.body1}}</p>
+      <p>{{var:loc.body2}}</p>
+      <a class="btn btn-primary" href="{{link:contact}}#quote" data-open-quote>Get a quote in {{var:loc.town}}</a>
+    </div>
+    <div class="ba-stack">
+      <div class="ba" data-before-after>
+        <img class="ba-after" src="{{asset:img/Wood-Hotel-Bedroom-after.jpg}}" alt="Hotel bedroom after vinyl wrapping" loading="lazy">
+        <div class="ba-before-wrap"><img class="ba-before" src="{{asset:img/Wood-Hotel-Bedroom-Before.jpg}}" alt="Hotel bedroom before vinyl wrapping" loading="lazy"></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+        <span class="ba-label ba-label-before">Before</span><span class="ba-label ba-label-after">After</span>
+      </div>
+      <p class="ba-caption">Hotel bedroom joinery and wall panels wrapped in wood grain</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container split split-rev">
+    <div class="split-copy">
+      <p class="eyebrow">Durability</p>
+      <h2>Built for busy commercial environments</h2>
+      <p>Our vinyl wrapping solutions are built for everyday commercial use, offering both durability and visual impact. All finishes withstand heat, humidity and daily wear while keeping a professional appearance. We regularly work with:</p>
+      <ul class="ticks">
+        {{#each loc.sectors}}<li>{{this}}</li>{{/each}}
+      </ul>
+      <a class="btn btn-primary" href="{{link:contact}}#quote" data-open-quote>Book a site survey</a>
+    </div>
+    <div class="photo-grid-2">
+      <img src="{{asset:img/Wimbledon-Cubicles-before.jpg}}" alt="Cubicles before wrapping" loading="lazy">
+      <img src="{{asset:img/Wimbledon-Cubicles-After.jpg}}" alt="Cubicles after wrapping" loading="lazy">
+      <img src="{{asset:img/487853851_1210783431050631_7165934014178650100_n.jpg}}" alt="Office gates before wrapping" loading="lazy">
+      <img src="{{asset:img/487464040_1210783414383966_3193114366617491664_n.jpg}}" alt="Office gates after wrapping" loading="lazy">
+    </div>
+  </div>
+</section>
+
+{{> process}}
+{{> testimonials}}
+{{> quote-section}}
+{{> faq}}

@@ -1,0 +1,58 @@
+<form class="quote-form" method="post" action="/api/lead" novalidate data-quote-form>
+  <input type="hidden" name="page" value="{{var:canonical}}">
+  <input type="hidden" name="source" value="website">
+  <input type="hidden" name="_t" value="">
+  <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+  <fieldset class="qf-type">
+    <legend>What would you like wrapped?</legend>
+    <div class="pills">
+      <label><input type="radio" name="project" value="Kitchen" checked><span>Kitchen</span></label>
+      <label><input type="radio" name="project" value="Wardrobes / furniture"><span>Wardrobes &amp; furniture</span></label>
+      <label><input type="radio" name="project" value="Commercial / office"><span>Commercial / office</span></label>
+      <label><input type="radio" name="project" value="Something else"><span>Something else</span></label>
+    </div>
+  </fieldset>
+
+  <div class="qf-grid">
+    <label class="field"><span>Your name <em>*</em></span><input type="text" name="name" required autocomplete="name" placeholder="e.g. Sarah Jones"></label>
+    <label class="field"><span>Phone <em>*</em></span><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="07xxx xxx xxx"></label>
+    <label class="field"><span>Email <em>*</em></span><input type="email" name="email" required autocomplete="email" placeholder="you@example.com"></label>
+    <label class="field"><span>Postcode</span><input type="text" name="postcode" autocomplete="postal-code" placeholder="e.g. GU30 7GW" maxlength="10"></label>
+    <label class="field qf-kitchen-only"><span>Roughly how many doors &amp; drawer fronts?</span>
+      <select name="size">
+        <option value="">Not sure yet</option>
+        <option>Up to 10</option>
+        <option>10 – 20</option>
+        <option>20 – 30</option>
+        <option>30+</option>
+      </select>
+    </label>
+    <label class="field"><span>Preferred contact</span>
+      <select name="contact_pref">
+        <option>Phone call</option>
+        <option>WhatsApp</option>
+        <option>Email</option>
+      </select>
+    </label>
+  </div>
+
+  <label class="field"><span>Tell us about the project</span><textarea name="message" rows="4" placeholder="What is it, what is the current finish, and what look are you going for? Any timescales?"></textarea></label>
+
+  <div class="field qf-photos">
+    <span>Add photos <small>(optional, up to 3 — photos help us quote faster)</small></span>
+    <label class="upload-box">
+      <input type="file" name="photos" accept="image/*" multiple>
+      <span class="upload-cta"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg> Tap to add photos</span>
+    </label>
+    <div class="upload-previews" aria-live="polite"></div>
+  </div>
+
+  <label class="check"><input type="checkbox" name="consent" required><span>I'm happy for Vinyl Wrapsody to contact me about my enquiry. See our <a href="{{link:privacy}}" target="_blank">privacy policy</a>.</span></label>
+
+  <div class="qf-actions">
+    <button type="submit" class="btn btn-primary btn-lg">Get my free quote <span aria-hidden="true">→</span></button>
+    <p class="qf-reassure">No obligation. We usually reply within one working day.</p>
+  </div>
+  <p class="qf-status" role="status" aria-live="polite"></p>
+</form>
