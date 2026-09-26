@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{var:title}}</title>
 <meta name="description" content="{{var:description}}">
-{{#if preview}}<meta name="robots" content="noindex">{{else}}<link rel="canonical" href="{{var:canonical}}">{{/if}}
+{{#if demo}}<meta name="robots" content="noindex">{{else}}<link rel="canonical" href="{{var:canonical}}">{{/if}}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Vinyl Wrapsody">
 <meta property="og:title" content="{{var:title}}">
@@ -27,10 +27,10 @@
     whatsapp: "{{site.whatsapp}}",
     leadEndpoint: "/api/lead",
     thankYou: "{{link:thank-you}}",
-    demo: {{#if preview}}true{{else}}false{{/if}}
+    demo: {{#if demo}}true{{else}}false{{/if}}
   };
 </script>
-{{#if preview}}{{else}}
+{{#if demo}}{{else}}
 <!-- Google Analytics 4 (existing property ID carried over). Conversions fire as generate_lead / click_call / click_whatsapp events. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{site.gaId}}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{site.gaId}}');</script>

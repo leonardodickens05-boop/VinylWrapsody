@@ -4,6 +4,7 @@
  *
  *   node build.js            -> builds pretty URLs (/contact/) into ./public
  *   node build.js --preview  -> builds file-style links (contact/index.html) into ./preview
+ *   node build.js --demo     -> builds into ./public with the form in preview mode (for a backend-less host)
  *
  * Template syntax (inside src/pages/*.html and src/partials/*.html):
  *   {{> name}}                include src/partials/name.html
@@ -23,6 +24,8 @@ const fs = require('fs');
 const path = require('path');
 
 const PREVIEW = process.argv.includes('--preview');
+// --demo: pretty URLs but the form runs in preview mode (no backend, e.g. GitHub Pages) and pages are noindex
+const DEMO = PREVIEW || process.argv.includes('--demo');
 const ROOT = __dirname;
 const SRC = path.join(ROOT, 'src');
 const OUT = path.join(ROOT, PREVIEW ? 'preview' : 'public');
@@ -104,7 +107,7 @@ function render(tpl, ctx, depth) {
 function writePage(key, html, vars) {
   const folder = PAGES[key];
   const depth = (key === 'not-found' && !PREVIEW) ? 0 : (folder ? 1 : 0);
-  const ctx = Object.assign({}, vars, { site, locations, page: key, preview: PREVIEW, canonical: site.url + '/' + (folder ? folder + '/' : '') });
+  const ctx = Object.assign({}, vars, { site, locations, page: key, preview: PREVIEW, demo: DEMO, canonical: site.url + '/' + (folder ? folder + '/' : '') });
   let out = render(partials.layout, ctx, depth).replace('{{body}}', () => render(html, ctx, depth));
   // second pass so vars inside the body that came from partials resolve
   out = render(out, ctx, depth);

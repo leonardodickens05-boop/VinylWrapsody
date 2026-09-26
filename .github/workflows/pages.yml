@@ -1,0 +1,35 @@
+# Publishes a preview of the site to GitHub Pages on every push.
+# The Pages build runs the quote form in preview mode (no email backend) – use Netlify for the real thing.
+name: Deploy preview to GitHub Pages
+on:
+  push:
+    branches: [main, claude/vinyl-wrapsody-conversions-5uq5uh]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node test/lead-handler.test.js
+      - run: node build.js --demo
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - id: deployment
+        uses: actions/deploy-pages@v4
