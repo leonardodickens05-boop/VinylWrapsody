@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "basingstoke",
+    "town": "Basingstoke",
+    "county": "Hampshire",
+    "hero": "Wimbledon-Cubicles-cover.jpg",
+    "intro": "At Vinyl Wrapsody, we provide premium commercial vinyl wrapping for offices, retail spaces and business interiors in Basingstoke, helping companies refresh their environments quickly and cost-effectively.",
+    "intro2": "With over 15 years of experience, we deliver durable, high-quality architectural vinyl solutions across Basingstoke and the surrounding Hampshire area.",
+    "body1": "Commercial vinyl wrapping is a modern alternative to traditional refurbishment, allowing you to upgrade interiors without replacing existing fixtures or furniture. We apply specialist architectural vinyl directly to existing surfaces, transforming walls, doors, furniture and fixed interior elements with minimal disruption to your business.",
+    "body2": "In Basingstoke, this service is especially popular with offices, retail units and landlords looking to modernise spaces quickly and efficiently.",
+    "sectors": ["Office interiors and workspaces", "Retail units and shop fittings", "Reception areas and client-facing spaces", "Landlord and multi-tenant properties"],
+    "nearby": "Basingstoke, Hook, Fleet, Farnborough, Alton, Winchester and across Hampshire"
+  },
+  {
+    "slug": "guildford",
+    "town": "Guildford",
+    "county": "Surrey",
+    "hero": "saville-row-cover.jpg",
+    "intro": "Upgrade your commercial interiors in Guildford with high-end vinyl wrapping that delivers a modern, professional finish without the disruption of traditional refurbishment.",
+    "intro2": "With over 15 years of experience, we help businesses create stylish, durable interiors using existing surfaces in Guildford and across Surrey.",
+    "body1": "Vinyl wrapping is an efficient way to modernise commercial interiors without the need for costly replacements or long downtime. We apply durable architectural vinyl directly onto existing surfaces, transforming offices, reception areas, furniture and interior fixtures.",
+    "body2": "In Guildford, this service is commonly used by businesses looking for a more premium, design-led interior finish.",
+    "sectors": ["Corporate offices and co-working spaces", "Retail stores and showrooms", "Hospitality and customer-facing environments", "Landlords and commercial property managers"],
+    "nearby": "Guildford, Godalming, Farnham, Cranleigh, Haslemere and across Surrey"
+  },
+  {
+    "slug": "woking",
+    "town": "Woking",
+    "county": "Surrey",
+    "hero": "Wimbeldon-Lockers-cover.jpg",
+    "intro": "Transform your commercial interiors in Woking without the cost, downtime or disruption of a full refurbishment.",
+    "intro2": "With over 15 years of experience, we deliver durable, high-quality architectural vinyl solutions across Woking and the surrounding Surrey area.",
+    "body1": "Commercial vinyl wrapping lets you upgrade interiors without replacing existing fixtures or furniture. We apply specialist architectural vinyl directly to existing surfaces, transforming walls, doors, furniture and fixed interior elements with minimal disruption to your business.",
+    "body2": "In Woking, this service is especially popular with offices, retail units, hotels and landlords looking to modernise spaces quickly and efficiently.",
+    "sectors": ["Office interiors and workspaces", "Hotels and student accommodation", "Retail units and shop fittings", "Landlord and multi-tenant properties"],
+    "nearby": "Woking, Weybridge, Byfleet, Chertsey, Camberley and across Surrey"
+  }
+]
